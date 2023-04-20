@@ -11,10 +11,11 @@
 #define ___ &trans
 
 #define QWERTY 0
-#define KEYPAD 1
-#define FN 2
-#define MOD 3
-#define MS 4
+#define COLEMAK 1
+#define KEYPAD 2
+#define FN 3
+#define MOD 4
+#define MS 5
 
 / {
     /* remove unused keys from layout and move thumb cluster to bottom */
@@ -35,6 +36,19 @@
                                                                   &kp LCTRL &kp LALT       &kp LGUI  &kp RCTRL
                                                         &kp BSPC  &kp DEL   &kp HOME       &kp PG_UP &kp ENTER &kp SPACE
                                                                             &kp END        &kp PG_DN
+            >;
+        };
+
+        colemak_layer {
+            bindings = <
+                ___       ___       ___       ___       ___       ___       ___            ___       ___       ___       ___       ___       ___       ___
+                ___       &kp Q     &kp W     &kp F     &kp P     &kp B     ___            ___       &kp J     &kp L     &kp U     &kp Y     &kp SQT   &kp BSLH
+                ___       &kp A     &kp R     &kp S     &kp T     &kp G     ___            ___       &kp M     &kp N     &kp E     &kp I     &kp O     &kp FSLH
+                ___       &kp Z     &kp X     &kp C     &kp D     &kp V                              &kp K     &kp H     &kp COMMA &kp DOT   &kp SEMI  ___
+                ___       ___       ___       ___       ___                                                    ___       ___       ___       ___       ___
+                                                                  ___       ___            ___       ___
+                                                        ___       ___       ___            ___       ___       ___
+                                                                            ___            ___
             >;
         };
 
